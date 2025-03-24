@@ -32,12 +32,13 @@ Feedback Request 1 Date: X
 
 Response: Not Complete
 Directly from slide 34, a good pivot is considered the center n/2 pivots, between n/4 and 3n/4
-Choosing any element randomly (most efficient to thus simply choose the first element in the list) results in a likelihood of 1/2 for the first random element to fall under a "good pivot".
+Choosing any element randomly (most efficient to thus simply choose the first element in the array) results in a likelihood of 1/2 for the first random element to fall under a "good pivot".
 This is due to n/2 taking up one half of the elements, giving the randomly selected first element a 1/2 chance of being within the "good" n/2 center between n/4 and 3n/4.
 This is covered within the slides.
 
 Now we must move towards figuring out the probability of selecting a "good" pivot, but now via the method of inspecting the first, middle, and last elements of an array, then choosing the median value of them.
-...
+We must still consider that as the array is randomly sorted, each of these chosen elements (Index 0, middle positon via length of array / 2 rounded if needed, and final position at index arrayLength -1) has an equal chance to be anywhere within the array numerically.
+Mathmatically, this can be seen with ----------
 
 
 
