@@ -20,7 +20,9 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
+
 //
+
 
 Name: Kane Kriz
 
@@ -28,7 +30,9 @@ Start Date: 11 Feb 2025
 Last Edited: 24 March 2025
 Feedback Request 1 Date: X
 
+
 //
+
 
 Response: Not Complete
 Directly from slide 34, a good pivot is considered the center n/2 pivots, between n/4 and 3n/4
@@ -38,7 +42,26 @@ This is covered within the slides.
 
 Now we must move towards figuring out the probability of selecting a "good" pivot, but now via the method of inspecting the first, middle, and last elements of an array, then choosing the median value of them.
 We must still consider that as the array is randomly sorted, each of these chosen elements (Index 0, middle positon via length of array / 2 rounded if needed, and final position at index arrayLength -1) has an equal chance to be anywhere within the array numerically.
-Mathmatically, this can be seen with ----------
+
+
+Mathmatically, this can be seen via considering the possible outcomes of each of the three selected values being within or otuside of the desired n/2 center range.
+Take, for instance, if all three (position 0, middle position, end position) are all outside of the desired "good" pivot range. Then the selected pivot from the median would be forced to be out of the good range.
+
+So the permutations would be: 
+GGG
+
+GGB GBG BGG 
+
+BBG GBB BGB
+
+BBB
+
+With "G" signifying that a value is within the "good" center range for pivots, and "B" meaning a bad pivot outside of the center range.
+All permutations sharing a row above are in essence the same, as the median pivot selector is assumed to sort the three values taken from the three outlined positions, as they are from a presumably unsorted list and thus have an equal likelihood to be any value.
+
+The easiest to consider are the GGG and BBB, corresponding to all three selected indexes holding values that are either all within or outside of the desired range, respectively.
+
+Next, we can consider
 
 
 
