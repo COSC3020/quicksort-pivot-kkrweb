@@ -27,7 +27,9 @@ might help with the notation for mathematical expressions.
 Name: Kane Kriz
 
 Start Date: 11 Feb 2025
+
 Last Edited: 24 March 2025
+
 Feedback Request 1 Date: X
 
 
@@ -61,8 +63,28 @@ All permutations sharing a row above are in essence the same, as the median pivo
 
 The easiest to consider are the GGG and BBB, corresponding to all three selected indexes holding values that are either all within or outside of the desired range, respectively.
 
-Next, we can consider
+Next, we can consider the permutations with two elements within the n/2 range. 
+This includes GGB GBG and BGG.
+All of these are forced to sort into BGG or GGB, each of which contain a "G" pivot as desired in the median position.
 
+The only permutations that we have not yet considered are BBG, GBB, and BGB.
+These can be sorted into a variety of results. 
+BBG, GBB, and BGB can all sort into either their existing order or the other orders (at equal probability, as each element is of random numerical value).]
+
+This can be understood as the "B" elements can be either in the 0 to n/4, or 3n/4 to 1 segments.
+They can both be lower than the good pivot, or they can be both higher than the good pivot in numerical value.
+In each of these scenarios, a bad pivot would ultimately be selected as the median.
+However, the third possibility is that one bad pivot is less than the good pivot, and one is greater than the good pivot.
+This would force the good pivot into the median position, resulting in a good pivot median being selected.
+
+Overall, we can now consider the number of permutations that result in a good median pivot, divided by the overall number of permutations.
+
+There are four permutations of the randomly selected elements (again - position 0, middle position, last position) which result in a guaranteed good median pivot being selected.
+There is one permutation that results in a guaranteed bad median pivot being selected.
+There are three permutations that have a 1/3 possibility of being sorted numerically into an order that results in a good pivot being selected.
+
+(4 + 3*(1/3)) / 7 = 5/7
+There is a 5/7 chance for the median-of-three to select a good pivot.
 
 
 //
