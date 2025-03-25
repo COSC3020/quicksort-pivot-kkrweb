@@ -30,13 +30,13 @@ Start Date: 11 Feb 2025
 
 Last Edited: 24 March 2025
 
-Feedback Request 1 Date: X
+Feedback Request 1 Date: 24 March 2025
 
 
 //
 
 
-Response: Not Complete
+Response:
 Directly from slide 34, a good pivot is considered the center n/2 pivots, between n/4 and 3n/4
 Choosing any element randomly (most efficient to thus simply choose the first element in the array) results in a likelihood of 1/2 for the first random element to fall under a "good pivot".
 This is due to n/2 taking up one half of the elements, giving the randomly selected first element a 1/2 chance of being within the "good" n/2 center between n/4 and 3n/4.
@@ -47,9 +47,11 @@ We must still consider that as the array is randomly sorted, each of these chose
 
 
 Mathmatically, this can be seen via considering the possible outcomes of each of the three selected values being within or otuside of the desired n/2 center range.
-Take, for instance, if all three (position 0, middle position, end position) are all outside of the desired "good" pivot range. Then the selected pivot from the median would be forced to be out of the good range.
+Take, for instance, if all three (position 0, middle position, end position) are all outside of the desired "good" pivot range. 
+Then the selected pivot from the median would be forced to be out of the good range.
 
-So the permutations would be: 
+So the visualized permutations of the randomly selected three positions would be: 
+
 GGG
 
 GGB GBG BGG 
@@ -86,9 +88,17 @@ There are three permutations that have a 1/3 possibility of being sorted numeric
 (4 + 3*(1/3)) / 7 = 5/7
 There is a 5/7 chance for the median-of-three to select a good pivot.
 
+This chance assumes that the array is indeed randomly sorted, as potential sorting / patterns would disrupt these values.
+
+So, overall, the median-of-three method for selecting a pivot seems to increase likelihood that a good pivot is selected.
+This does not necessarily mean that the median-of-three method is a good idea to utilize, however.
+Selecting the first and last elements of the array, as well as selecting the middle indexed element (potentially involving rounding) takes time, as well as the necessity to sort these three elements in order to choose a pivot.
+
+Presumably, yes, there are particular instances where the median-of-three being utilized could be a net positive and a helpful aspect of a quickSort implementation concerning runtime.
+However, there are many variables (including potential patterns, somewhat sorted data, and time taken to find the median pivot) that can make the median-of-three an unnecessarily complicated and potentially negative thing to implement into quickSort.
+
 
 //
-
 
 
 Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
